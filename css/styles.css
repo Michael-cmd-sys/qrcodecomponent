@@ -25,11 +25,17 @@ body {
 img {
     width: 100%;
     border-radius: 10px;
+    height: calc(100% / 1.5);
+    object-fit: auto;
 }
 
 .card {
     background-color: var(--white);
-    width: 50%;
+    width: calc(100% / 1.5);
+    height: calc(100% / 1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 20px;
     margin: 1.43rem;
     border-radius: 10px;
@@ -58,11 +64,24 @@ img {
 @media screen and (min-width:1440px) {
     .card{
         width: 43%;
+        height: 70%;
+        margin: 1rem;
     }
   }
 
-  @media screen and (max-width:375px) {
+  @media screen and (min-width:670px) and (max-width:1440px) {
     .card{
-        width: 90%;
+        width: calc(100vw / 3);
+        height: calc(100% / 1.3);
+        margin: 1rem;
     }
+    
   }
+
+  @media screen and (max-width:670px) {
+    .card{
+        width: 100%;
+        height: 90%;
+        margin: 1rem;
+    }
+}
